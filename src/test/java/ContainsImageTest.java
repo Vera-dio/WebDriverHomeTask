@@ -39,7 +39,7 @@ public class ContainsImageTest {
         wait.until(ExpectedConditions.visibilityOf(blockOfImages));
         List<WebElement> listOfImages = driver.findElements(By.xpath("//img[@class='rg_i Q4LuWd']"));
         for (int i = 0; i < 4; i++){
-            assertTrue(listOfImages.get(i).isDisplayed());
+            assertTrue(listOfImages.get(i).isDisplayed(), "No image #%d".formatted(i + 1));
         }
     }
 
